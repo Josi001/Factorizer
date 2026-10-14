@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA Key Gen and Factorizer</title>
+</head>
+<body>
+    <div class="gen_div">
+
+        <header class="heading">
+            <p>RSA Key Gen and Factorizer</p>
+        </header>
+
+        <div class="body">
+
+            <div class="left_div">
+                <p class="left_heading">
+                    RSA Key Generation
+                </p>
+
+     
+
+                <div class="primes">
+                    <label for="my-options">Choose a prime type:</label>
+                    <select id="prime_type" name="options">
+                    <option value="standard">Standard</option>
+                    <option value="small">Small</option>
+                    <option value="close">Closely Spaced</option>
+                    <option value="large">Large</option>
+                    <option value="widely_spaced">Widely Spaced</option>
+                    <option value="equal">Equal</option>
+
+                    </select>
+                </div>
+                
+                <div class="prime e">
+                    <input type="number" id="bits">
+                    <label for="exponentE">Enter Bit Length</label>
+                </div>
+
+                 <div class="prime plaintext">
+                    <input type="text" id="plaintext">
+                    <label for="plaintext">Enter Plaintext</label>
+                </div>
+                
+                <button class="gen_keys">Generate</button>
+                <button class="reset">Reset</button>
+
+               
+
+                <div class="result">
+
+                    <div class="status gen">
+                         <div class="status_label">Status</div>
+                         <div class="status_value scroll">__</div>
+                    </div>
+
+                     <div class="p gen">
+                         <div class="p_label">p</div>
+                         <div class="p_value scroll">__</div>
+                    </div>
+
+                    <div class="q gen">
+                         <div class="q_label">q</div>
+                         <div class="q_value scroll">__</div>
+                    </div>
+
+                    <div class="n gen">
+                         <div class="n_label">n(modulus)</div>
+                         <div class="n_value scroll">__</div>
+                    </div>
+
+                    <div class="bit_length gen">
+                        <div class="phi_label"> Bit Length</div>
+                        <div class="phi_value">__</div>
+                    </div>
+
+                    <div class="pub_key gen">
+                        <div class="pub_label">Public (n,e)</div>
+                        <div class="pub_value scroll">__</div>
+                    </div>
+                   
+                    <div class="priv_key gen">
+                        <div class="priv_label">Private (n,d) </div>
+                        <div class="priv_value scroll">__</div>
+                    </div>
+
+                    <div class="decrypt_msg gen">
+                        <div class="decrypt_label">Ciphertext:</div>
+                        <div id="output-message">__</div>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+    
+
+            <div class="right_div">
+                <p class="right_heading">
+                    Factorization Algorithms
+                </p>
+
+                  <div class="result">
+                    <div class="method gen">
+                         <div class="method">Method:</div>
+                         <div class="tmethod_value">__</div>
+                    </div>
+
+                    <div class="success gen">
+                        <div class="success_label">Success</div>
+                        <div class="tsuccess_value">__</div>
+                    </div>
+
+                    <div class="Runtime gen">
+                        <div class="Runtime_label">Runtime</div>
+                        <div class="tRuntime_value">__</div>
+                    </div>
+
+                     <div class="Attempts gen">
+                        <div class="Attempts_label">Attempts</div>
+                        <div class="tAttempts_value">__</div>
+                    </div>
+
+                    <div class="z">
+
+                    <div class="success gen">
+                        <div class="success_label">Est Sec</div>
+                        <div class="estsec_value">__</div>
+                    </div>
+
+                    <div class="Runtime gen">
+                        <div class="Runtime_label">Est Years</div>
+                        <div class="estyears_value">__</div>
+                    </div>
+
+                     <div class="Attempts gen">
+                        <div class="Attempts_label">Est Operations</div>
+                        <div class="estops_value">__</div>
+                    </div>
+
+                    </div>
+                   
+                </div>
+
+                 <div class="result">
+                    <div class="method gen">
+                         <div class="method">Method:</div>
+                         <div class="pmethod_value">__</div>
+                    </div>
+
+                    <div class="success gen">
+                        <div class="success_label">Success</div>
+                        <div class="psuccess_value">__</div>
+                    </div>
+
+                    <div class="Runtime gen">
+                        <div class="Runtime_label">Runtime</div>
+                        <div class="pRuntime_value">__</div>
+                    </div>
+
+                     <div class="Attempts gen">
+                        <div class="Attempts_label">Attempts</div>
+                        <div class="pAttempts_value">__</div>
+                    </div>
+
+                    <div class="p">
+
+                    <div class="success gen z">
+                        <div class="success_label">Est Sec</div>
+                        <div class="estpsec_value">__</div>
+                    </div>
+
+                    <div class="Runtime gen z">
+                        <div class="Runtime_label">Est Years</div>
+                        <div class="estpyears_value">__</div>
+                    </div>
+
+                     <div class="Attempts gen z">
+                        <div class="Attempts_label">Est Operations</div>
+                        <div class="estpops_value">__</div>
+                    </div>
+
+                    </div>
+                   
+                </div>
+
+                 <div class="result">
+                    <div class="method gen">
+                         <div class="method">Method:</div>
+                         <div class="fmethod_value">__</div>
+                    </div>
+
+                    <div class="success gen">
+                        <div class="success_label">Success</div>
+                        <div class="fsuccess_value">__</div>
+                    </div>
+
+                    <div class="Runtime gen">
+                        <div class="Runtime_label">Runtime</div>
+                        <div class="fRuntime_value">__</div>
+                    </div>
+
+                     <div class="Attempts gen">
+                        <div class="Attempts_label">Attempts</div>
+                        <div class="fAttempts_value">__</div>
+                    </div>
+
+                    <div class="f">
+
+                    <div class="success gen">
+                        <div class="success_label">Est Sec</div>
+                        <div class="estfsec_value">__</div>
+                    </div>
+
+                    <div class="Runtime gen">
+                        <div class="Runtime_label">Est Years</div>
+                        <div class="estfyears_value">__</div>
+                    </div>
+
+                     <div class="Attempts gen">
+                        <div class="Attempts_label">Est Operations</div>
+                        <div class="estfops_value">__</div>
+                    </div>
+                    
+                    </div>
+                   
+                </div>
+<!-- 
+                <div class="prime integer_n">
+                    <input type="number" id="integer_n" placeholder="__">
+                    <label for="integer_n">Integer n</label>
+                </div>
+
+              <div class="prime ctext">
+                    <input type="text" id="ctext">
+                    <label for="ctext">Ciphertext</label>
+                </div> -->
+            </div>
+
+        </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

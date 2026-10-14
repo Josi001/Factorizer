@@ -1,0 +1,7 @@
+django
+djangorestframework
+whitenoise
+markdown
+python-decouple
+django-cors-headers
+gunicorn
