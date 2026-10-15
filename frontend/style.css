@@ -268,7 +268,7 @@ select:focus {
 
 .gen_div {
   height: fit-content;
-  padding: 0px;
+  padding: 20px;
 }
 
 .e, .plaintext{ 
