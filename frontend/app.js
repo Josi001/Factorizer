@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/generate-and-analyze/",
+        "/api/generate-and-analyze/",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
